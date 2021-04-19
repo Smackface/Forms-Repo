@@ -11,12 +11,16 @@ import Condiments from './Burger Forms/Condiments';
 
 
 
-function App(){render();{return(<Router><div>
-    <h1>is my div working?</h1>
-        <Route path="/Patty" component={Patty}/>
-        <Route path= "BunsAndToppings" component={BunsAndToppings}/>
-        <Route path= "Condiments" component={Condiments}/>
-    </div>
-</Router>)}}
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/Patty" component={Patty} />
+        <Route path="BunsAndToppings" component={BunsAndToppings} />
+        <Route path="Condiments" component={Condiments} />
+      </Switch>
+    </Router>
+  );
+}
 
 export default App;
