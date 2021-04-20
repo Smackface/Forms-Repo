@@ -1,17 +1,57 @@
 .App {
-  text-align: center;
+  font-weight: 300;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+form {
+  padding: 20px 20px 20px 20px;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #76b1c2;
+  margin: 1.5rem auto 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* #BunsAndToppingsForm{
+display: flex;
+flex-direction: column;
+align-content: center;
+} */
+
+button {
+  padding:0.46em 1.6em;
+  border:0.1em solid #000000;
+  margin:1em 0.2em 0.2em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:white;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  background-color:dimgray;
+  text-align:center;
+  transition: all 0.15s;
 }
+
+input {
+  margin: 5px 5px 5px 5px;
+}
+
+input:hover{
+  background-color: rgb(221, 221, 221);
+  border-color:silver;
+}
+
+button:hover{
+text-shadow: 0 0 2em rgba(255,255,255,1);
+color:#FFFFFF;
+border-color:#FFFFFF;
+}
+
 
 .App-header {
   background-color: #282c34;

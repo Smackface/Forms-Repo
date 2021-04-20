@@ -16,8 +16,8 @@ function App() {
     <Router>
       <Switch>
         <Route path="/Patty" component={Patty} />
-        <Route path="BunsAndToppings" component={BunsAndToppings} />
-        <Route path="Condiments" component={Condiments} />
+        <Route path="/BunsAndToppings" component={BunsAndToppings} />
+        <Route path="/Condiments" component={Condiments} />
       </Switch>
     </Router>
   );
