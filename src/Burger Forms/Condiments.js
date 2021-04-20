@@ -24,13 +24,18 @@ const CondimentsForm = () => {
         type="select"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.Patty}
+        value={formik.values.Condiments}
       />
-      {formik.touched.Patty && formik.errors.Patty ? (
-        <div>{formik.errors.Patty}</div>
+      {formik.touched.Condiments && formik.errors.Condiments ? (
+        <div>{formik.errors.Condiments}</div>
       ) : null}
 
-      <button type="submit">Submit</button>
+      <button
+        type="submit"
+        disabled={(!formik.isValid, !formik.touched.Condiments)}
+      >
+        Submit
+      </button>
     </form>
   );
 };

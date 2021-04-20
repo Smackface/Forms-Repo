@@ -28,7 +28,11 @@ const PattyForm = () => {
         <div>{formik.errors.Patty}</div>
       ) : null}
       <Link to="/BunsAndToppings">
-        <button type="submit" id="pattybutton">
+        <button
+          type="submit"
+          id="pattybutton"
+          disabled={(!formik.isValid, !formik.touched.Patty)}
+        >
           Submit
         </button>
       </Link>

@@ -43,7 +43,13 @@ const BunsAndToppingsForm = () => {
         <div>{formik.errors.Toppings}</div>
       ) : null}
       <Link to="/Condiments">
-        <button type="submit" id="bunsbutton">
+        <button
+          type="submit"
+          id="bunsbutton"
+          disabled={
+            (!formik.isValid, !formik.touched.Buns, !formik.touched.Toppings)
+          }
+        >
           Submit
         </button>
       </Link>
