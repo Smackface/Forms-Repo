@@ -1,10 +1,15 @@
-import React, { Component } from "react";
+import React, { Component, createContext, useContext, useReducer } from "react";
+import { useState } from "react"
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
+import { BurgerContext } from './Context';
+
+
 
 const PattyForm = () => {
-  const formik = useFormik({
+  const [value, setValue] = useContext(BurgerContext)
+    const formik = useFormik({
     initialValues: { Patty: "" },
     validationSchema: Yup.object({
       Patty: Yup.string().max(3, "Yes or No").required("Required"),
@@ -29,6 +34,7 @@ const PattyForm = () => {
       ) : null}
       <Link to="/BunsAndToppings">
         <button
+          onClick={() => setValue(value)}
           type="submit"
           id="pattybutton"
           disabled={(!formik.isValid, !formik.touched.Patty)}
